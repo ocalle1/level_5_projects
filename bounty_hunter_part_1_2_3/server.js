@@ -9,6 +9,6 @@ app.use(express.json());
 app.use("/bounty", require("./routes/bountyRouter.js"))
 
 //We want the server to always be listening 1.port 2.CB
-app.listen(9100, () => {
-    console.log("the server is running on Port 9100")
+app.listen(9300, () => {
+    console.log("the server is running on Port 9300")
 })

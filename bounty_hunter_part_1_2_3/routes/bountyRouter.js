@@ -6,10 +6,10 @@ const uuid = require('uuid').v4;//3
 
 //2
 const bounty = [
-    { firstName:"bubba", lastName: "sparks", living: true, amount: 10000, type: "Sith", _id: uuid() },
-    { firstName:"susan", lastName: "gibbson", living: true, amount: 50000, type: "Jedi", _id: uuid() },
-    { firstName:"mikayla", lastName: "johnson", living: true, amount: 20000, type: "Sith", _id: uuid() },
-    { firstName:"john", lastName: "bob", living: true, amount: 70000, type: "Jedi", _id: uuid() }
+    { firstName:"bubba", lastName: "sparks", living:"yes", amount: 10000, type: "Sith", _id: uuid() },
+    { firstName:"susan", lastName: "gibbson", living: "yes", amount: 50000, type: "Jedi", _id: uuid() },
+    { firstName:"mikayla", lastName: "johnson", living: "yes", amount: 20000, type: "Sith", _id: uuid() },
+    { firstName:"john", lastName: "bob", living: "yes", amount: 70000, type: "Jedi", _id: uuid() }
 ]
 //Route
 //displays the bounty
