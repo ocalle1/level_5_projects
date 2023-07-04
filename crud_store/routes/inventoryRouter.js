@@ -41,7 +41,7 @@ inventoryRouter.get('/:inventoryid', (request, response, next) => {
             return response.status(200).send(`Successfully found item ${findInventories.item} from the database`)
         })
 });
-//DELETE
+// DELETE
 inventoryRouter.delete("/:inventoryId", (request, response, next) => {
     Inventory.findOneAndDelete({ _id: request.params.inventoryId })
         .exec()
