@@ -45,17 +45,20 @@ return response.status(200).send(`Successfully found item ${findInventories.item
     })
 })
 
-inventoryRouter.get("/search/item", (request, response, next) => {
-    Inventory.find({item:request.query.item})
+inventoryRouter.delete("/:inventoryId", (request, response, next) => {
+    Inventory.findOneAndDelete({_id: request.params.inventoryId})
     .exec()
-    .then(inventories => {
-        return response.status(200).send(inventories)
+    .then(deletedInventory => {
+        if (!deletedInventory){
+            return response.status(404).send("Item not foun d")
+        }
+        return response.status(200).send(`Successfulle deleted item ${deletedItem.item} from the database`)
     })
     .catch(error => {
         response.status(500)
         return next(error)
     })
-});
+})
 
 
 
